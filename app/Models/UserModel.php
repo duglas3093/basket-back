@@ -36,8 +36,87 @@ class UserModel extends Model
     protected $deletedField  = 'deleted_at';
 
     // Validation
-    protected $validationRules      = [];
-    protected $validationMessages   = [];
+    protected $validationRules      = [
+        'nombre'=>[
+            'label'=>'nombre',
+            'rules'=> 'required'
+        ],
+        'apellido_p'=>[
+            'label'=>'apellido_p',
+            'rules'=> 'required'
+        ],
+        'apellido_m'=>[
+            'label'=>'apellido_m',
+            'rules'=> 'required'
+        ],
+        'fecha_nac'=>[
+            'label'=>'fecha_nac',
+            'rules'=> 'required'
+        ],
+        'nacionalidad'=>[
+            'label'=>'nacionalidad',
+            'rules'=> 'required'
+        ],
+        'sexo'=>[
+            'label'=>'sexo',
+            'rules'=> 'required'
+        ],
+        'email'=>[
+            'label'=>'email',
+            'rules'=> 'required'
+        ],
+        'celular'=>[
+            'label'=>'celular',
+            'rules'=> 'required'
+        ],
+        'dni'=>[
+            'label'=>'dni',
+            'rules'=> 'required'
+        ],
+        'rol'=>[
+            'label'=>'rol',
+            'rules'=> 'required'
+        ],
+        'contraseña'=>[
+            'label'=>'contraseña',
+            'rules'=> 'required'
+        ],
+    ];
+    protected $validationMessages   = [
+        'nombre' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'apellido_p' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'apellido_m' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'fecha_nac' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'nacionalidad' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'sexo' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'email' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'celular' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'dni' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'rol' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'contraseña' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+    ];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
 
