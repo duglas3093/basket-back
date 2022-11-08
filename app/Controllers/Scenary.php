@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class User extends BaseController
+class Scenary extends BaseController
 {
     public function index()
     {
