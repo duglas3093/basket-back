@@ -29,8 +29,31 @@ class ImageModel extends Model
     protected $deletedField  = 'deleted_at';
 
     // Validation
-    protected $validationRules      = [];
-    protected $validationMessages   = [];
+    protected $validationRules      = [
+        'Escenario_id'=>[
+            'label'=>'Escenario_id',
+            'rules'=> 'required'
+        ],
+        'Usuario_id'=>[
+            'label'=>'Usuario_id',
+            'rules'=> 'required'
+        ],
+        'etiqueta'=>[
+            'label'=>'etiqueta',
+            'rules'=> 'required'
+        ]
+    ];
+    protected $validationMessages   = [
+        'Escenario_id' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'Usuario_id' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'etiqueta' => [
+            'required'  => 'El campo {field} es requerido.'
+        ]
+    ];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
 
