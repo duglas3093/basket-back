@@ -29,8 +29,38 @@ class ScenaryModel extends Model
     protected $deletedField  = 'deleted_at';
 
     // Validation
-    protected $validationRules      = [];
-    protected $validationMessages   = [];
+    protected $validationRules      = [
+        'nombre'=>[
+            'label'=>'nombre',
+            'rules'=> 'required'
+        ],
+        'ubicacion'=>[
+            'label'=>'ubicacion',
+            'rules'=> 'required'
+        ],
+        'capacidad'=>[
+            'label'=>'capacidad',
+            'rules'=> 'required'
+        ],
+        'disponible'=>[
+            'label'=>'disponible',
+            'rules'=> 'required'
+        ],
+    ];
+    protected $validationMessages   = [
+        'nombre' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'ubicacion' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'capacidad' => [
+            'required'  => 'El campo {field} es requerido.'
+        ],
+        'disponible' => [
+            'required'  => 'El campo {field} es requerido.'
+        ]
+    ];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
 
