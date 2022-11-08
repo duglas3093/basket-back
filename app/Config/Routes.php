@@ -37,6 +37,14 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->group('api',  function($routes){//api/notes
+    $routes->resource('championship');
+    $routes->resource('team');
+    $routes->resource('scenary');
+    $routes->resource('image');
+    $routes->resource('player');
+    $routes->resource('user');
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing
